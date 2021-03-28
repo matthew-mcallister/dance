@@ -13,13 +13,13 @@ import {
   jumpTo,
 } from "../utils/selectionHelper";
 
-const getMenu = (name: string) => (editorState: EditorState) => {
+export const getMenu = (name: string) => (editorState: EditorState) => {
   const menuItems = editorState.extension.menus.get(name)!.items;
 
   return Object.entries(menuItems).map((x) => [x[0], x[1].text]) as [string, string][];
 };
 
-const executeMenuItem = async (editorState: EditorState, name: string, i: number) => {
+export const executeMenuItem = async (editorState: EditorState, name: string, i: number) => {
   const menuItems = editorState.extension.menus.get(name)!.items;
   const menuItem = Object.values(menuItems)[i];
 

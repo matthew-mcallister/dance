@@ -457,6 +457,18 @@
                   "command": "dance.goto.lastModification.extend"
                 }
               }
+            },
+            "view": {
+              "items": {
+                "c": {
+                  "text": "center view (vertically)",
+                  "command": "dance.view.center"
+                },
+                "v": {
+                  "text": "center view (vertically)",
+                  "command": "dance.view.center"
+                }
+              }
             }
           }
         }
@@ -1175,6 +1187,18 @@
         "command": "dance.goto.lastModification",
         "title": "Go to last buffer modification position",
         "description": "Go to last buffer modification position.",
+        "category": "Dance"
+      },
+      {
+        "command": "dance.view",
+        "title": "View...",
+        "description": "Shows prompt to reposition the screen.",
+        "category": "Dance"
+      },
+      {
+        "command": "dance.view.center",
+        "title": "Center cursor (vertically)",
+        "description": "Center the window on the cursor.",
         "category": "Dance"
       },
       {
@@ -2172,6 +2196,11 @@
         "when": "editorTextFocus && dance.mode == 'normal'"
       },
       {
+        "command": "dance.view",
+        "key": "v",
+        "when": "editorTextFocus && dance.mode == 'normal'"
+      },
+      {
         "command": "dance.registers.insert",
         "key": "Ctrl+r",
         "when": "editorTextFocus && dance.mode == 'normal'"
@@ -2414,11 +2443,6 @@
       {
         "command": "dance.count.9",
         "key": "9",
-        "when": "editorTextFocus && dance.mode == 'normal'"
-      },
-      {
-        "command": "dance.cancel",
-        "key": "v",
         "when": "editorTextFocus && dance.mode == 'normal'"
       },
       {

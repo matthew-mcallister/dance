@@ -529,6 +529,7 @@ import "./search";
 import "./select";
 import "./selections";
 import "./selectObject";
+import "./view";
 import "./yankPaste";
 
 Object.freeze(commandsByName);

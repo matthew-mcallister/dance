@@ -178,6 +178,19 @@ for (const [suffix, desc] of [
   };
 }
 
+menus["view"] = {
+  items: {
+    "c": {
+      text: `center view (vertically)`,
+      command: "dance.view.center",
+    },
+    "v": {
+      text: `center view (vertically)`,
+      command: "dance.view.center",
+    },
+  }
+}
+
 // Package information
 // ============================================================================
 

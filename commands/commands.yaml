@@ -636,6 +636,18 @@ goto.lastModification:
   title: Go to last buffer modification position
   add: extend
 
+# View (view.ts)
+# ================================================================================================
+
+view:
+  title: View...
+  descr: Shows prompt to reposition the screen.
+  keys: v (normal)
+
+view.center:
+  title: Center cursor (vertically)
+  descr: Center the window on the cursor.
+
 # Menus (menus.ts)
 # ================================================================================================
 

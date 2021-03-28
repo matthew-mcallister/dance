@@ -1608,6 +1608,30 @@ export const gotoLastModification: ICommand<"dance.goto.lastModification"> = {
 };
 
 /**
+ * Shows prompt to reposition the screen.
+ *
+ * Default key: `V` (`dance.mode == 'normal'`).
+ */
+export const view: ICommand<"dance.view"> = {
+  id         : "dance.view",
+  title      : "View...",
+  description: "Shows prompt to reposition the screen.",
+  keybindings: [
+    { key: "v", when: "editorTextFocus && dance.mode == 'normal'" },
+  ],
+};
+
+/**
+ * Center the window on the cursor.
+ */
+export const viewCenter: ICommand<"dance.view.center"> = {
+  id         : "dance.view.center",
+  title      : "Center cursor (vertically)",
+  description: "Center the window on the cursor.",
+  keybindings: [],
+};
+
+/**
  * Open quick-jump menu.
  */
 export const openMenu: ICommand<"dance.openMenu"> = {
@@ -2565,6 +2589,10 @@ export const commands = {
   gotoSelectedFile,
   /** Go to last buffer modification position. */
   gotoLastModification,
+  /** Shows prompt to reposition the screen. */
+  view,
+  /** Center the window on the cursor. */
+  viewCenter,
   /** Open quick-jump menu. */
   openMenu,
   /** Insert value in register. */
@@ -2917,6 +2945,10 @@ export const enum Command {
   gotoSelectedFile = "dance.goto.selectedFile",
   /** Go to last buffer modification position. */
   gotoLastModification = "dance.goto.lastModification",
+  /** Shows prompt to reposition the screen. */
+  view = "dance.view",
+  /** Center the window on the cursor. */
+  viewCenter = "dance.view.center",
   /** Open quick-jump menu. */
   openMenu = "dance.openMenu",
   /** Insert value in register. */
